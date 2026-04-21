@@ -1,0 +1,6 @@
+bill = float(input("How much was the bil: "))
+tip = float(input("What percentage do you want to tip: "))
+customer = int(input("How many people to split the bill: "))
+final_bill = bill + (bill * tip / 100)
+seperation = float(final_bill / customer)
+print(f"Each person should pay: ${seperation:.2f}")
