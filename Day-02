@@ -1,0 +1,39 @@
+while True:
+    print("Welcome to Treasure Island.")
+
+    direction = input("Would you like to go right or left? : ").lower()
+
+    if direction == "right":
+        print("Fall into a hole.\nGAME OVER")
+        break
+
+    elif direction == "left":
+        print("You saw an ocean.")
+
+        action = input("Do you want to swim (yes/no): ").lower()
+
+        if action == "yes":
+            print("You drowned.\nGAME OVER")
+            break
+
+        elif action == "no":
+            action_1 = input("You saw a house. Enter? (yes/no): ").lower()
+
+            if action_1 == "no":
+                print("A bear attacked you.\nGAME OVER")
+                break
+
+            elif action_1 == "yes":
+                action_2 = input("Red door or blue door or get out? (red/blue/out): ").lower()
+
+                if action_2 == "red":
+                    print("You found a leather shoe.\nGAME OVER")
+                    break
+
+                elif action_2 == "blue":
+                    print("You found the TREASURE!\nYOU WIN 🎉")
+                    break
+
+                elif action_2 == "out":
+                    print("The bear was still there.\nGAME OVER")
+                    break
