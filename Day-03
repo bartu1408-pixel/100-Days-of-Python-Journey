@@ -1,0 +1,26 @@
+import random
+
+while True:
+    moves = ["rock", "paper", "scissors"]
+    computers_move = random.choice(moves)
+    your_move = input("Your move (rock, paper, or scissors): ").lower()
+    if your_move == computers_move:
+        print(computers_move)
+        print("It's a tie!")
+        exit
+    elif your_move == "rock" and computers_move == "scissors":
+        print("Computer choose: ", computers_move)
+        print("YOU WIN!")
+        exit
+    elif your_move == "paper" and computers_move == "rock":
+        print("Computer choose: ", computers_move)
+        print("YOU WIN!")
+        exit
+    elif your_move == "scissors" and computers_move == "paper":
+        print("Computer choose: ", computers_move)
+        print("YOU WIN!")
+        exit
+    else:
+        print("Computer choose: ", computers_move)
+        print("YOU LOSE!")
+        exit
