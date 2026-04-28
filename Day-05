@@ -1,0 +1,129 @@
+import random
+print("---------------------ROLL GAME--------------------------")
+print("THIS IS A ROLL GAME.\nEVERY ROUND YOU ROLL AND RANDOM SITUATION WILL ACCUR AND EFFECTS YOU. IF LOSE ALL YOUR HEALTH YOU LOSE. \nREACHING ROUND 10 WILL MAKE YOU WIN. \ncurrent health = 100")
+items = ["apple", "banana", "cherry", "health_potion", "armor", "toxic_soup", "damage_potion", "bear", "wizzard", "villager", "huge_monster", "lightning"]
+health = 100
+game_round = 0
+
+
+while True:
+    roll = input("do you want to roll? (yes/no): ").lower()
+    if roll == "yes":
+        item = random.choice(items)
+        if item == "apple":
+            print("you roll and get", item)
+            health += 5
+            game_round += 1
+            print("you get an apple your health increases 5 your current health is:", health)
+            print("game round", game_round, "finished")
+            print("\n")
+
+        elif item == "banana":
+            print("you roll and get", item)
+            health += 3
+            game_round += 1
+            print("you get a banana your health increases 3 your current health is:", health)
+            print("game round", game_round, "finished")
+            print("\n")
+
+
+        elif item == "cherry":
+            print("you roll and get", item)
+            health += 1
+            game_round += 1
+            print("you get a cherry your health increases 1 your current health is:", health)
+            print("game round", game_round, "finished")
+            print("\n")
+
+
+        elif item == "health_potion":
+            print("you roll and get", item)
+            health += 15
+            game_round += 1
+            print("you get a health potion your health increases 15 your current health is:", health)
+            print("game round", game_round, "finished")
+            print("\n")
+
+
+        elif item == "armor":
+            print("you roll and get", item)
+            health += 15
+            game_round += 1
+            print("you found an armor your health increases 15 your current health is:", health)
+            print("game round", game_round, "finished")
+            print("\n")
+
+
+        elif item == "toxic_soup":
+            print("you roll and get", item)
+            health -= 20
+            game_round += 1
+            print("you get an toxic soup and you lose 20 health your current health is:", health)
+            print("game round", game_round, "finished")
+            print("\n")
+
+
+        elif item == "damage_potion":
+            print("you roll and get", item)
+            health -= 20
+            game_round += 1
+            print("you get an damage potion and you lose 20 health your current health is:", health)
+            print("game round", game_round, "finished")
+            print("\n")
+
+
+        elif item == "bear":
+            print("you roll and get", item)
+            health -= 35
+            game_round += 1
+            print("you came across a bear and you lose 35 health your current health is:", health)
+            print("game round", game_round, "finished")
+            print("\n")
+
+
+        elif item == "wizzard":
+            print("you roll and get", item)
+            health = 40
+            game_round += 1
+            print("you came across a wizard and your health becomes:", health)
+            print("game round", game_round, "finished")
+            print("\n")
+
+
+        elif item == "villager":
+            print("you roll and get", item)
+            game_round += 1
+            print("you came across a villager and he talks about animals nothing happens your current health is:", health)
+            print("game round", game_round, "finished")
+            print("\n")
+
+
+        elif item == "huge_monster":
+            print("you roll and get", item)
+            health -= 50
+            game_round += 1
+            print("you came across a huge monster and you lose 50 healt, your current health is:", health)
+            print("game round", game_round, "finished")
+            print("\n")
+
+        elif item == "lightning":
+            print("you roll and get", item)
+            health -= 45
+            game_round += 1
+            print("you get structed by lighning and lose 45 health, your current health is:", health)
+            print("game round", game_round, "finished")
+            print("\n")
+
+        if health <= 0:
+            health = 0
+            print("---------------YOU LOST ALL YOUR HEALTH GAME OVER--------------")
+            break
+        if game_round == 10:
+            print("------------------YOU WIN!----------------------")
+            break
+    else:
+        print("--------------------YOU GIVE UP YOU LOSE-----------------")
+        break
+print("\n")
+input("Press any key to exit.")
+
