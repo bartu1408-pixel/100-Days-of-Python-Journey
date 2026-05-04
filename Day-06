@@ -1,0 +1,46 @@
+import random
+
+while True:
+    words = ["apple", "banana", "cherry", "grape"]
+    choosen_word = random.choice(words)
+
+    game_round = 0
+    correct_letters = []
+    game_over = False
+
+    print("_" * len(choosen_word))
+
+    while not game_over:
+        guess = input("Enter your guess: ").lower()
+
+        if guess in choosen_word:
+            print("GAME CONTINUES YOU GUESSED CORRECTLY")
+            if guess not in correct_letters:
+                correct_letters.append(guess)
+        else:
+            game_round += 1
+            print("GUESSED INCORRECTLY")
+            print(f"{10 - game_round} GUESSES LEFT")
+
+        display = ""
+        for letter in choosen_word:
+            if letter in correct_letters:
+                display += letter
+            else:
+                display += "_"
+
+        print(display)
+
+        if "_" not in display:
+            print("You win!")
+            game_over = True
+
+        if game_round == 10:
+            print("GAME OVER")
+            print("WORD WAS:", choosen_word)
+            game_over = True
+    start_again = input("Do you want to play again? (y/n): ").lower()
+    if start_again == "y":
+        continue
+    else:
+        break
