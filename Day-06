@@ -43,4 +43,6 @@ while True:
     if start_again == "y":
         continue
     else:
-        break
+        print("\n")
+        input("Press any key to exit.")
+
