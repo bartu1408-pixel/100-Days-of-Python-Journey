@@ -1,0 +1,40 @@
+def add(a,b):
+    return a+b
+def sub(a,b):
+    return a-b
+def mul(a,b):
+    return a*b
+def div(a,b):
+    if b == 0:
+        print("Division by zero")
+        return 0
+    else:
+        return a/b
+
+
+opperations = {
+    "+": add,
+    "-": sub,
+    "*": mul,
+    "/": div
+}
+
+while True:
+    a = int(input("Enter the first number: "))
+    b = int(input("Enter the second number: "))
+    opp = opperations.get(input("Enter the operation: "))
+    result = opp(a,b)
+    print("=", result)
+
+    while True:
+        choice = input(f"Continue with {result}? (press: y ) , Continue with new calculation (press: n) ").lower()
+        if choice == "y":
+            a = result
+            b = int(input("Enter the second number: "))
+            opp = opperations.get(input("Enter the operation: "))
+            result = opp(a, b)
+            print("=", result)
+        else:
+            break
+
+
