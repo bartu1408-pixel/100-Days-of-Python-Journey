@@ -1,0 +1,18 @@
+bidds = {}
+while True:
+    check = input("Is there a bidder : ").lower()
+    if check == "yes":
+        print("\n" * 100)
+        name = input("Bidders Name: ")
+        amaount = float(input("Amaount : $"))
+        bidds[name] = amaount
+    else:
+        break
+
+top_bidder = ("")
+top_amaount = 0
+if amaount > top_amaount:
+    top_amaount = amaount
+    top_bidder = name
+print("\n" * 100)
+print(f"The winner is {top_bidder} with {top_amaount} $")
